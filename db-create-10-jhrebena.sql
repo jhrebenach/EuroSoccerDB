@@ -6,7 +6,6 @@
 CREATE TABLE sponsor (
 	name				VARCHAR(30) PRIMARY KEY
 	,type				VARCHAR(30)
-
 );
 
 CREATE TABLE referee (
