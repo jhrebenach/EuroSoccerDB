@@ -40,7 +40,7 @@ CREATE TABLE sponsors (
 CREATE TABLE officiated_by (
 	rfirst_name			VARCHAR(30) PRIMARY KEY
 	,rlast_name			VARCHAR(30) PRIMARY KEY
-	home_team			VARCHAR(30) PRIMARY KEY
-	match_date			DATE PRIMARY KEY
+	,home_team			VARCHAR(30) PRIMARY KEY
+	,match_date			DATE PRIMARY KEY
 );
 
