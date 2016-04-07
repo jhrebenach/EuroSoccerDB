@@ -45,10 +45,10 @@ CREATE TABLE sponsors (
 );
 
 CREATE TABLE officiated_by (
-	rfirst_name			VARCHAR(30) PRIMARY KEY
-	,rlast_name			VARCHAR(30) PRIMARY KEY
-	,home_team			VARCHAR(30) PRIMARY KEY
-	,match_date			DATE 		PRIMARY KEY
+	rfirst_name			VARCHAR(30) NOT NULL
+	,rlast_name			VARCHAR(30) NOT NULL
+	,home_team			VARCHAR(30) NOT NULL
+	,match_date			DATE 		NOT NULL
 	,PRIMARY KEY (rfirst_name, rlast_name, home_team, match_date)
 	,FOREIGN KEY (rfirst_name, rlast_name, home_team, match_date)
 );
