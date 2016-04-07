@@ -33,7 +33,10 @@ CREATE TABLE advertises (
 	,team_name			VARCHAR(30) NOT NULL
 	,team_city			VARCHAR(30) NOT NULL
 	,PRIMARY KEY (sname, utype, team_name, team_city)
-	,FOREIGN KEY (sname, utype, team_name, team_city)
+	,FOREIGN KEY (sname)
+		REFERENCES sponsor(name)
+	,FOREIGN KEY (utype, team_name, team_city)
+		REFERENCES uniform(type, team_name, team_city)
 );
 
 CREATE TABLE sponsors (
@@ -41,7 +44,10 @@ CREATE TABLE sponsors (
 	,league_name		VARCHAR(30) NOT NULL
 	,date_signed		DATE
 	,PRIMARY KEY (sponsors_name, league_name)
-	,FOREIGN KEY (sponsors_name, league_name)
+	,FOREIGN KEY (sponsors_name)
+		REFERENCES sponsor(name)
+	,FOREIGN KEY (league_name)
+		REFERENCES league(name)
 );
 
 CREATE TABLE officiated_by (
@@ -50,7 +56,10 @@ CREATE TABLE officiated_by (
 	,home_team			VARCHAR(30) NOT NULL
 	,match_date			DATE 		NOT NULL
 	,PRIMARY KEY (rfirst_name, rlast_name, home_team, match_date)
-	,FOREIGN KEY (rfirst_name, rlast_name, home_team, match_date)
+	,FOREIGN KEY (rfirst_name, rlast_name)
+		REFERENCES referee(rfirst_name, rlast_name)
+	,FOREIGN KEY (home_team, match_date)
+		REFERENCES match(home_team, match_date)
 );
 
 
