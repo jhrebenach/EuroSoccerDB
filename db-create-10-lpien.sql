@@ -18,23 +18,29 @@ CREATE TABLE team(
 	year_founded SMALLINT,
 	number_players SMALLINT,
 	number_champ SMALLINT,
-	league_name VARCHAR(30) references league(name),
-	stadium_name VARCHAR(30) references stadium(name),
-	stadium_city_town VARCHAR(30) references stadium(city_town),
+	league_name VARCHAR(30),
+	stadium_name VARCHAR(30),
+	stadium_city_town VARCHAR(30),
 	PRIMARY KEY (name, city)
+	FOREIGN KEY (league_name) REFERENCES league(name),
+	FOREIGN KEY (stadium_name, stadium_city_town) REFERENCES stadium(name, city_town)
 );
 
 CREATE TABLE owns(
-	ofirst_name VARCHAR(30) references owner(ofirst_name),
-	olast_name VARCHAR(30) references onwer(olast_name),
-	owner_date_of_birth DATE references owner(date_of_birth),
-	team_name VARCHAR(30) references team(name),
-	team_city VARCHAR(30) references team(city)
+	ofirst_name VARCHAR(30),
+	olast_name VARCHAR(30),
+	owner_date_of_birth DATE,
+	team_name VARCHAR(30),
+	team_city VARCHAR(30),
+	FOREIGN KEY (ofirst_name, olast_name, owner_date_of_birth) REFERENCES owner(ofirst_name, olast_name, date_of_birth),
+	FOREIGN KEY (team_name, team_city) REFERENCES team(name, city)
 );
 
 CREATE TABLE endorses(
-	sponsors_name VARCHAR(30) references sponsor(name),
-	team_name VARCHAR(30) references team(name),
-	team_city VARCHAR(30) references team(city),
-	date_signed	DATE
+	sponsors_name VARCHAR(30),
+	team_name VARCHAR(30),
+	team_city VARCHAR(30),
+	date_signed	DATE,
+	FOREIGN KEY sponsors_name REFERENCES sponsor(name),
+	FOREIGN KEY team_name, team_city REFERENCES team(name, city)
 );
