@@ -32,6 +32,7 @@ CREATE TABLE owns(
 	owner_date_of_birth DATE,
 	team_name VARCHAR(30),
 	team_city VARCHAR(30),
+	PRIMARY KEY (ofirst_name, olast_name, owner_date_of_birth, team_name, team_city),
 	FOREIGN KEY (ofirst_name, olast_name, owner_date_of_birth) REFERENCES owner(ofirst_name, olast_name, date_of_birth),
 	FOREIGN KEY (team_name, team_city) REFERENCES team(name, city)
 );
@@ -41,6 +42,7 @@ CREATE TABLE endorses(
 	team_name VARCHAR(30),
 	team_city VARCHAR(30),
 	date_signed	DATE,
+	PRIMARY KEY (sponsors_name, team_name, team_city),
 	FOREIGN KEY sponsors_name REFERENCES sponsor(name),
 	FOREIGN KEY team_name, team_city REFERENCES team(name, city)
 );
