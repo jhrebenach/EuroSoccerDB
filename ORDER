@@ -18,3 +18,58 @@ Advertises
 Officiated_by
 Plays_in
 Supports
+
+
+OLD ORDER
+LP
+	Stadium
+	Team
+	Owns
+	Endorses
+
+Ale
+	League
+	Player
+	Uniform
+	Supports
+
+Mariana
+	Match
+	Match_home_team
+	Coach
+	Plays_in
+
+Jeff
+	Sponsor
+	Referee
+	Owner
+	advertises
+	sponsors
+	officiated_by
+	
+NEW POTENTIAL ORDER
+LP
+	Stadium
+	League
+	Owner
+	Sponsor
+
+Ale
+	Referee
+	Team
+	Coach
+	Match_home
+
+Mariana
+	Player
+	Endorses
+	Sponsors
+	Uniform
+	Match
+	
+Jeff
+	Owns
+	Advertises
+	Officiated_by
+	Plays_in
+	Supports
