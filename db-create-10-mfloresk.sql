@@ -47,7 +47,7 @@ CREATE TABLE plays_in (
 	minutes_played SMALLINT,
 	PRIMARY KEY (pfirst_name, plast_name, pdate_of_birth, match_date, match_home_team),
 	FOREIGN KEY (pfirst_name, plast_name, pdate_of_birth) 
-			REFERENCES player(first_name, last_name, date_of_birth),
+			REFERENCES player(pfirst_name, plast_name, pdate_of_birth),
 	FOREIGN KEY (match_date) REFERENCES match(date),
 	FOREIGN KEY (match_home_team) REFERENCES team(name);
 	)

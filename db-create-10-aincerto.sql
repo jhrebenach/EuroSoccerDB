@@ -16,7 +16,7 @@ CREATE TABLE league (
 CREATE TABLE player (
 	pfirst_name VARCHAR(30) NOT NULL,
 	plast_name VARCHAR(30) NOT NULL,
-	date_of_birth DATE NOT NULL,
+	pdate_of_birth DATE NOT NULL,
 	country VARCHAR(25),
 	position CHAR(3),
 	preferred_leg CHAR(5),
