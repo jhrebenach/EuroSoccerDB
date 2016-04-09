@@ -11,8 +11,8 @@ CREATE TABLE match (
 	FOREIGN KEY (home_team,home_team_city)
 				REFERENCES team(name,city)
 	FOREIGN KEY (visiting_team, visiting_team_city)
-				REFERENCES team(name,city);
-	)
+				REFERENCES team(name,city)
+);
 
 
 CREATE TABLE match_home_team (
@@ -22,8 +22,8 @@ CREATE TABLE match_home_team (
 	league_name VARCHAR(30),
 	PRIMARY KEY (home_team),
 	FOREIGN KEY (stadium_name, stadium_city_town) REFERENCES stadium(name,city_town),
-	FOREIGN KEY (league_name) REFERENCES league(name);
-	)
+	FOREIGN KEY (league_name) REFERENCES league(name)
+);
 
 
 CREATE TABLE coach (
@@ -35,8 +35,8 @@ CREATE TABLE coach (
 	team_city VARCHAR(30),
 	num_championships SMALLINT,
 	PRIMARY KEY (first_name, last_name, date_of_birth),
-	FOREIGN KEY (team_name, team_city) REFERENCES team(name,city);
-	)
+	FOREIGN KEY (team_name, team_city) REFERENCES team(name,city)
+);
 
 CREATE TABLE plays_in (
 	pfirst_name VARCHAR(30),
@@ -49,5 +49,5 @@ CREATE TABLE plays_in (
 	FOREIGN KEY (pfirst_name, plast_name, pdate_of_birth) 
 			REFERENCES player(pfirst_name, plast_name, pdate_of_birth),
 	FOREIGN KEY (match_date) REFERENCES match(date),
-	FOREIGN KEY (match_home_team) REFERENCES team(name);
-	)
+	FOREIGN KEY (match_home_team) REFERENCES team(name)
+);

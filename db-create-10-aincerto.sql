@@ -32,8 +32,8 @@ CREATE TABLE uniform (
 	primary_color VARCHAR(30),
 	secondary_color VARCHAR(30),
 	tertiary_color VARCHAR(30),
-	team_name VARCHAR(30),
-	team_city VARCHAR(30)
+	team_name VARCHAR(30) NOT NULL,
+	team_city VARCHAR(30) NOT NULL,
 	PRIMARY KEY (type, team_name, team_city),
 	FOREIGN KEY (team_name, team_city) REFERENCES team(name, city)
 );
