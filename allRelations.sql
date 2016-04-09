@@ -2,9 +2,7 @@ CREATE TABLE league (
 	name VARCHAR(30) NOT NULL,
 	country VARCHAR(25),
 	number_teams SMALLINT,
-	current_champion VARCHAR(30),
-	PRIMARY KEY (name),
-	FOREIGN KEY (current_champion) REFERENCES team(name)
+	PRIMARY KEY (name)
 );
 
 CREATE TABLE stadium(
