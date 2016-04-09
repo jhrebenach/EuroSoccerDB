@@ -16,6 +16,8 @@ CREATE TABLE referee (
 	,position			VARCHAR(30)
 	,league_name		VARCHAR(30)
 	,PRIMARY KEY (rfirst_name, rlast_name)
+	,FOREIGN KEY (league_name)
+		REFERENCES league(name)
 );
 
 CREATE TABLE owner (
