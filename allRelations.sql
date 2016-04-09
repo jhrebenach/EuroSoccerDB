@@ -25,7 +25,7 @@ CREATE TABLE team(
 	league_name VARCHAR(30),
 	stadium_name VARCHAR(30),
 	stadium_city_town VARCHAR(30),
-	PRIMARY KEY (name, city)
+	PRIMARY KEY (name, city),
 	FOREIGN KEY (league_name) REFERENCES league(name),
 	FOREIGN KEY (stadium_name, stadium_city_town) REFERENCES stadium(name, city_town)
 );
@@ -37,7 +37,7 @@ CREATE TABLE uniform (
 	secondary_color VARCHAR(30),
 	tertiary_color VARCHAR(30),
 	team_name VARCHAR(30),
-	team_city VARCHAR(30)
+	team_city VARCHAR(30),
 	PRIMARY KEY (type, team_name, team_city),
 	FOREIGN KEY (team_name, team_city) REFERENCES team(name, city)
 );
@@ -53,11 +53,9 @@ CREATE TABLE match (
 	home_team_city VARCHAR(30) NOT NULL,
 	visiting_team_city VARCHAR(30) NOT NULL,
 	PRIMARY KEY (home_team, mdate),
-	FOREIGN KEY (home_team,home_team_city)
-				REFERENCES team(name,city)
-	FOREIGN KEY (visiting_team, visiting_team_city)
-				REFERENCES team(name,city)
-	);
+	FOREIGN KEY (home_team,home_team_city) REFERENCES team(name,city),
+	FOREIGN KEY (visiting_team, visiting_team_city) REFERENCES team(name,city)
+);
 
 
 CREATE TABLE player (
@@ -81,7 +79,7 @@ CREATE TABLE match_home_team (
 	PRIMARY KEY (home_team),
 	FOREIGN KEY (stadium_name, stadium_city_town) REFERENCES stadium(name,city_town),
 	FOREIGN KEY (league_name) REFERENCES league(name)
-	):
+);
 
 
 CREATE TABLE plays_in (
@@ -92,11 +90,10 @@ CREATE TABLE plays_in (
 	match_date DATE,
 	minutes_played SMALLINT,
 	PRIMARY KEY (pfirst_name, plast_name, pdate_of_birth, match_date, match_home_team),
-	FOREIGN KEY (pfirst_name, plast_name, pdate_of_birth) 
-			REFERENCES player(first_name, last_name, date_of_birth),
+	FOREIGN KEY (pfirst_name, plast_name, pdate_of_birth) REFERENCES player(first_name, last_name, date_of_birth),
 	FOREIGN KEY (match_date) REFERENCES match(mdate),
-	FOREIGN KEY (match_home_team) REFERENCES team(name);
-	);
+	FOREIGN KEY (match_home_team) REFERENCES team(name)
+);
 
 
 CREATE TABLE coach (
@@ -109,12 +106,12 @@ CREATE TABLE coach (
 	num_championships SMALLINT,
 	PRIMARY KEY (first_name, last_name, date_of_birth),
 	FOREIGN KEY (team_name, team_city) REFERENCES team(name,city)
-	);
+);
 
 CREATE TABLE sponsor (
-	name				VARCHAR(30) NOT NULL
-	,type				VARCHAR(30)
-	,PRIMARY KEY (name)
+	name VARCHAR(30) NOT NULL,
+	type VARCHAR(30),
+	PRIMARY KEY (name)
 );
 
 CREATE TABLE supports (
@@ -129,33 +126,31 @@ CREATE TABLE supports (
 );
 
 CREATE TABLE referee (
-	rfirst_name			VARCHAR(30) NOT NULL
-	,rlast_name			VARCHAR(30) NOT NULL
-	,country			VARCHAR(25)
-	,position			VARCHAR(30)
-	,league_name		VARCHAR(30)
-	,PRIMARY KEY (rfirst_name, rlast_name)
+	rfirst_name VARCHAR(30) NOT NULL,
+	rlast_name VARCHAR(30) NOT NULL,
+	country VARCHAR(25),
+	position VARCHAR(30),
+	league_name VARCHAR(30),
+	PRIMARY KEY (rfirst_name, rlast_name)
 );
 
 CREATE TABLE officiated_by (
-	rfirst_name			VARCHAR(30) NOT NULL
-	,rlast_name			VARCHAR(30) NOT NULL
-	,home_team			VARCHAR(30) NOT NULL
-	,match_date			DATE 		NOT NULL
-	,PRIMARY KEY (rfirst_name, rlast_name, home_team, match_date)
-	,FOREIGN KEY (rfirst_name, rlast_name)
-		REFERENCES referee(rfirst_name, rlast_name)
-	,FOREIGN KEY (home_team, match_date)
-		REFERENCES match(home_team, match_date)
+	rfirst_name VARCHAR(30) NOT NULL,
+	rlast_name VARCHAR(30) NOT NULL,
+	home_team VARCHAR(30) NOT NULL,
+	match_date DATE NOT NULL,
+	PRIMARY KEY (rfirst_name, rlast_name, home_team, match_date),
+	FOREIGN KEY (rfirst_name, rlast_name) REFERENCES referee(rfirst_name, rlast_name),
+	FOREIGN KEY (home_team, match_date) REFERENCES match(home_team, match_date)
 );
 
 CREATE TABLE owner (
-	ofirst_name			VARCHAR(30) NOT NULL
-	,olast_name			VARCHAR(30) NOT NULL
-	,occupation			VARCHAR(30)
-	,country			VARCHAR(25)
-	,date_of_birth		DATE
-	,PRIMARY KEY (ofirst_name, olast_name)
+	ofirst_name VARCHAR(30) NOT NULL,
+	olast_name VARCHAR(30) NOT NULL,
+	occupation VARCHAR(30),
+	country VARCHAR(25),
+	date_of_birth DATE,
+	PRIMARY KEY (ofirst_name, olast_name)
 );
 
 CREATE TABLE owns(
@@ -173,7 +168,7 @@ CREATE TABLE endorses(
 	sponsors_name VARCHAR(30),
 	team_name VARCHAR(30),
 	team_city VARCHAR(30),
-	date_signed	DATE,
+	date_signed DATE,
 	PRIMARY KEY (sponsors_name, team_name, team_city),
 	FOREIGN KEY (sponsors_name) REFERENCES sponsor(name),
 	FOREIGN KEY (team_name, team_city) REFERENCES team(name, city)
@@ -181,26 +176,22 @@ CREATE TABLE endorses(
 
 
 CREATE TABLE advertises (
-	sname				VARCHAR(30) NOT NULL
-	,utype				VARCHAR(20) NOT NULL
-	,team_name			VARCHAR(30) NOT NULL
-	,team_city			VARCHAR(30) NOT NULL
-	,PRIMARY KEY (sname, utype, team_name, team_city)
-	,FOREIGN KEY (sname)
-		REFERENCES sponsor(name)
-	,FOREIGN KEY (utype, team_name, team_city)
-		REFERENCES uniform(type, team_name, team_city)
+	sname VARCHAR(30) NOT NULL,
+	utype VARCHAR(20) NOT NULL,
+	team_name VARCHAR(30) NOT NULL,
+	team_city VARCHAR(30) NOT NULL,
+	PRIMARY KEY (sname, utype, team_name, team_city),
+	FOREIGN KEY (sname) REFERENCES sponsor(name),
+	FOREIGN KEY (utype, team_name, team_city) REFERENCES uniform(type, team_name, team_city)
 );
 
 CREATE TABLE sponsors (
-	sponsors_name		VARCHAR(30) NOT NULL
-	,league_name		VARCHAR(30) NOT NULL
-	,date_signed		DATE
-	,PRIMARY KEY (sponsors_name, league_name)
-	,FOREIGN KEY (sponsors_name)
-		REFERENCES sponsor(name)
-	,FOREIGN KEY (league_name)
-		REFERENCES league(name)
+	sponsors_name VARCHAR(30) NOT NULL,
+	league_name VARCHAR(30) NOT NULL,
+	date_signed DATE,
+	PRIMARY KEY (sponsors_name, league_name),
+	FOREIGN KEY (sponsors_name) REFERENCES sponsor(name),
+	FOREIGN KEY (league_name) REFERENCES league(name)
 );
 
 
