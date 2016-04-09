@@ -121,7 +121,7 @@ CREATE TABLE supports (
 	pdate_of_birth VARCHAR(30),
 	date_signed DATE,
 	PRIMARY KEY (sponsor_name, pfirst_name, plast_name, pdate_of_birth),
-	FOREIGN KEY (pfirst_name, plast_name, pdate_of_birth) REFERENCES player(pfirst_name, plast_name, pdate_of_birth),
+	FOREIGN KEY (pfirst_name, plast_name, pdate_of_birth) REFERENCES player(pfirst_name, plast_name, date_of_birth),
 	FOREIGN KEY (sponsor_name) REFERENCES sponsor(name)
 );
 
@@ -141,7 +141,7 @@ CREATE TABLE officiated_by (
 	match_date DATE NOT NULL,
 	PRIMARY KEY (rfirst_name, rlast_name, home_team, match_date),
 	FOREIGN KEY (rfirst_name, rlast_name) REFERENCES referee(rfirst_name, rlast_name),
-	FOREIGN KEY (home_team, match_date) REFERENCES match(home_team, match_date)
+	FOREIGN KEY (home_team, match_date) REFERENCES match(home_team, mdate)
 );
 
 CREATE TABLE owner (
@@ -149,7 +149,7 @@ CREATE TABLE owner (
 	olast_name VARCHAR(30) NOT NULL,
 	occupation VARCHAR(30),
 	country VARCHAR(25),
-	date_of_birth DATE,
+	date_of_birth DATE NOT NULL,
 	PRIMARY KEY (ofirst_name, olast_name)
 );
 
