@@ -41,8 +41,8 @@ CREATE TABLE endorses(
 	sponsors_name VARCHAR(30),
 	team_name VARCHAR(30),
 	team_city VARCHAR(30),
-	date_signed	DATE,
+	date_signed DATE,
 	PRIMARY KEY (sponsors_name, team_name, team_city),
-	FOREIGN KEY sponsors_name REFERENCES sponsor(name),
-	FOREIGN KEY team_name, team_city REFERENCES team(name, city)
+	FOREIGN KEY (sponsors_name) REFERENCES sponsor(name),
+	FOREIGN KEY (team_name, team_city) REFERENCES team(name, city)
 );
