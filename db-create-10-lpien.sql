@@ -3,46 +3,46 @@ Lauren Pien
 CSC 261
 */
 
-CREATE TABLE stadium(
-	capacity INT,
-	name VARCHAR(30) NOT NULL,
+CREATE TABLE coach (
+	first_name VARCHAR(30),
+	last_name VARCHAR(30),
+	date_of_birth DATE,
 	country VARCHAR(25),
-	city_town VARCHAR(30) NOT NULL,
-	street_address VARCHAR(30),
-	PRIMARY KEY (name, city_town)
+	team_name VARCHAR(30),
+	team_city VARCHAR(30),
+	num_championships SMALLINT,
+	PRIMARY KEY (first_name, last_name, date_of_birth),
+	FOREIGN KEY (team_name, team_city) REFERENCES team(name,city)
 );
-
-CREATE TABLE team(
+CREATE TABLE sponsor (
 	name VARCHAR(30) NOT NULL,
-	city VARCHAR(30) NOT NULL,
-	year_founded SMALLINT,
-	number_players SMALLINT,
-	number_champ SMALLINT,
-	league_name VARCHAR(30),
-	stadium_name VARCHAR(30),
-	stadium_city_town VARCHAR(30),
-	PRIMARY KEY (name, city)
-	FOREIGN KEY (league_name) REFERENCES league(name),
-	FOREIGN KEY (stadium_name, stadium_city_town) REFERENCES stadium(name, city_town)
+	type VARCHAR(30),
+	PRIMARY KEY (name)
 );
-
-CREATE TABLE owns(
-	ofirst_name VARCHAR(30),
-	olast_name VARCHAR(30),
-	owner_date_of_birth DATE,
-	team_name VARCHAR(30),
-	team_city VARCHAR(30),
-	PRIMARY KEY (ofirst_name, olast_name, owner_date_of_birth, team_name, team_city),
-	FOREIGN KEY (ofirst_name, olast_name, owner_date_of_birth) REFERENCES owner(ofirst_name, olast_name, date_of_birth),
-	FOREIGN KEY (team_name, team_city) REFERENCES team(name, city)
-);
-
-CREATE TABLE endorses(
-	sponsors_name VARCHAR(30),
-	team_name VARCHAR(30),
-	team_city VARCHAR(30),
+CREATE TABLE supports (
+	sponsor_name VARCHAR(30) NOT NULL,
+	playerfirst_name VARCHAR(30),
+	playerlast_name VARCHAR(30),
+	playerdate_of_birth DATE,
 	date_signed DATE,
-	PRIMARY KEY (sponsors_name, team_name, team_city),
-	FOREIGN KEY (sponsors_name) REFERENCES sponsor(name),
-	FOREIGN KEY (team_name, team_city) REFERENCES team(name, city)
+	PRIMARY KEY (sponsor_name, playerfirst_name, playerlast_name, playerdate_of_birth),
+	FOREIGN KEY (playerfirst_name, playerlast_name, playerdate_of_birth) REFERENCES player(pfirst_name, plast_name, date_of_birth),
+	FOREIGN KEY (sponsor_name) REFERENCES sponsor(name)
+);
+CREATE TABLE referee (
+	rfirst_name VARCHAR(30) NOT NULL,
+	rlast_name VARCHAR(30) NOT NULL,
+	country VARCHAR(25),
+	position VARCHAR(30),
+	league_name VARCHAR(30),
+	PRIMARY KEY (rfirst_name, rlast_name)
+);
+CREATE TABLE officiated_by (
+	rfirst_name VARCHAR(30) NOT NULL,
+	rlast_name VARCHAR(30) NOT NULL,
+	home_team VARCHAR(30) NOT NULL,
+	match_date DATE NOT NULL,
+	PRIMARY KEY (rfirst_name, rlast_name, home_team, match_date),
+	FOREIGN KEY (rfirst_name, rlast_name) REFERENCES referee(rfirst_name, rlast_name),
+	FOREIGN KEY (home_team, match_date) REFERENCES match(home_team, mdate)
 );
