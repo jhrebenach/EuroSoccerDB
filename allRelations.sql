@@ -114,12 +114,12 @@ CREATE TABLE sponsor (
 
 CREATE TABLE supports (
 	sponsor_name VARCHAR(30) NOT NULL,
-	pfirst_name VARCHAR(30),
-	plast_name VARCHAR(30),
-	pdate_of_birth VARCHAR(30),
+	playerfirst_name VARCHAR(30),
+	playerlast_name VARCHAR(30),
+	playerdate_of_birth DATE,
 	date_signed DATE,
-	PRIMARY KEY (sponsor_name, pfirst_name, plast_name, pdate_of_birth),
-	FOREIGN KEY (pfirst_name, plast_name, pdate_of_birth) REFERENCES player(pfirst_name, plast_name, date_of_birth),
+	PRIMARY KEY (sponsor_name, playerfirst_name, playerlast_name, playerdate_of_birth),
+	FOREIGN KEY (playerfirst_name, playerlast_name, playerdate_of_birth) REFERENCES player(pfirst_name, plast_name, date_of_birth),
 	FOREIGN KEY (sponsor_name) REFERENCES sponsor(name)
 );
 
@@ -152,13 +152,13 @@ CREATE TABLE owner (
 );
 
 CREATE TABLE owns(
-	ofirst_name VARCHAR(30),
-	olast_name VARCHAR(30),
+	ownerfirst_name VARCHAR(30),
+	ownerlast_name VARCHAR(30),
 	owner_date_of_birth DATE,
 	team_name VARCHAR(30),
 	team_city VARCHAR(30),
-	PRIMARY KEY (ofirst_name, olast_name, owner_date_of_birth, team_name, team_city),
-	FOREIGN KEY (ofirst_name, olast_name, owner_date_of_birth) REFERENCES owner(ofirst_name, olast_name, date_of_birth),
+	PRIMARY KEY (ownerfirst_name, ownerlast_name, owner_date_of_birth, team_name, team_city),
+	FOREIGN KEY (ownerfirst_name, ownerlast_name, owner_date_of_birth) REFERENCES owner(ofirst_name, olast_name, date_of_birth),
 	FOREIGN KEY (team_name, team_city) REFERENCES team(name, city)
 );
 
