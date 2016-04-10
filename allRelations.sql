@@ -148,7 +148,7 @@ CREATE TABLE owner (
 	occupation VARCHAR(30),
 	country VARCHAR(25),
 	date_of_birth DATE NOT NULL,
-	PRIMARY KEY (ofirst_name, olast_name)
+	PRIMARY KEY (ofirst_name, olast_name, date_of_birth)
 );
 
 CREATE TABLE owns(
