@@ -1,4 +1,4 @@
-/*
+
 --LEAGUE RELATION--
 INSERT INTO league
 VALUES ('La Liga', 'Spain', 20),
@@ -637,13 +637,13 @@ VALUES ('Luis Enrique','Martínez García','1970-05-08','Spain','Barcelona','Bar
 ,('Rolando','Maran','1963-07-14','Italy','Chievo','Chievo',0)
 ,('Giampiero','Ventura','1948-01-14','Italy','Torino','Turin',0);
 
-
+/*
 INSERT INTO sponsor
 VALUES
 
 INSERT INTO supports
 VALUES
-
+*/
 
 
 --REFEREE RELATION--
@@ -693,7 +693,7 @@ VALUES ('Josep Maria','Bartomeu Floreta','Business','Spain','1963-02-06')
 ,('Werner','Gegenbauer','Entrepreneur','Germany','1950-05-28')
 ,('Werner','Spinner','NULL','Germany','1948-10-30')
 ,('Harald','Strutz','NULL','Germany','1950-12-22');
-*/
+
 
 --OWNS RELATION--
 INSERT INTO owns
