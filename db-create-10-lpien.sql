@@ -24,7 +24,7 @@ CREATE TABLE supports (
 	playerfirst_name VARCHAR(30),
 	playerlast_name VARCHAR(30),
 	playerdate_of_birth DATE,
-	date_signed DATE,
+	date_signed SMALLINT,
 	PRIMARY KEY (sponsor_name, playerfirst_name, playerlast_name, playerdate_of_birth),
 	FOREIGN KEY (playerfirst_name, playerlast_name, playerdate_of_birth) REFERENCES player(pfirst_name, plast_name, date_of_birth),
 	FOREIGN KEY (sponsor_name) REFERENCES sponsor(name)
