@@ -1,4 +1,3 @@
-
 --LEAGUE RELATION--
 INSERT INTO league
 VALUES ('La Liga', 'Spain', 20),
@@ -9,7 +8,7 @@ VALUES ('La Liga', 'Spain', 20),
 
 --STADIUM RELATION--
 INSERT INTO stadium (capacity, name, country, city_town, street_address)
-VALUES (99354,'Camp Nou','Spain','Barcelona','Carrer d''Aristides Maillol')
+VALUES(99354,'Camp Nou','Spain','Barcelona','Carrer d''Aristides Maillol')
 ,(54907,'Estadio Vicente Calderón','Spain','Madrid','Paseo de la Virgen del Puerto')
 ,(81044,'Estadio Santiago Bernabéu','Spain','Madrid','Paseo de la Castellana')
 ,(25000,'Estadio el Madrigal','Spain','Villareal','Calle de Blasco Ibáñez')
@@ -215,7 +214,7 @@ VALUES('Barcelona','Málaga',1,0,'2015-08-29','20:30:00','Barcelona','Málaga')
 
 --PLAYER RELATION--
 INSERT INTO player
-VALUES ('Luis Alberto','Suárez Díaz','1987-01-24','Uruguay','FWD','Right','Barcelona','Barcelona')
+VALUES('Luis Alberto','Suárez Díaz','1987-01-24','Uruguay','FWD','Right','Barcelona','Barcelona')
 ,('Claudio Andrés','Bravo Muñoz','1983-04-13','Chile','GKP','Right','Barcelona','Barcelona')
 ,('Neymar','da Silva Santos','1992-02-05','Brazil','FWD','Right','Barcelona','Barcelona')
 ,('Sergio','Busquets Burgos','1988-07-16','Spain','MDF','Right','Barcelona','Barcelona')
@@ -421,7 +420,7 @@ VALUES ('Luis Alberto','Suárez Díaz','1987-01-24','Uruguay','FWD','Right','Bar
 
 --MATCH_HOME_TEAM RELATION
 INSERT INTO match_home_team
-VALUES ('Barcelona','Camp Nou','Barcelona','La Liga')
+VALUES('Barcelona','Camp Nou','Barcelona','La Liga')
 ,('Atletico de Madrid','Estadio Vicente Calderón','Madrid','La Liga')
 ,('Real Madrid','Estadio Santiago Bernabéu','Madrid','La Liga')
 ,('Villarreal','Estadio el Madrigal','Villareal','La Liga')
@@ -599,12 +598,63 @@ VALUES('Luis Alberto','Suárez Díaz','1987-01-24','Barcelona','2015-08-29',93)
 ,('Emiliano','Moretti','1981-06-11','Roma','2016-04-20',94)
 ,('Kamil','Glik','1988-02-03','Roma','2016-04-20',81)
 ,('Andrea','Belotti','1993-12-20','Roma','2016-04-20',94)
-,('Giuseppe','Vives','1980-07-14','Roma','2016-04-20',94);
+,('Giuseppe','Vives','1980-07-14','Roma','2016-04-20',94),
+--England--
+('Daniel','Drinkwater','1990-05-03','Tottenham','2016-01-13',91),
+('Jamie','Vardy','1987-01-11','Tottenham','2016-01-13',91),
+('N''Golo','Kanté','1991-03-29','Tottenham','2016-01-13',91),
+('Shinji','Okazaki','1986-04-16','Tottenham','2016-01-13',91),
+('Riyad','Mahrez','1991-02-21','Tottenham','2016-01-13',91),
+('Hugo','Lloris','1986-12-26','Tottenham','2016-01-13',91),
+('Eric','Lamela','1992-03-04','Tottenham','2016-01-13',60),
+('Harry','Kane','1993-07-28','Tottenham','2016-01-13',91),
+('Moussa','Dembele','1987-07-16','Tottenham','2016-01-13',67),
+('Kyle','Walker','1990-05-28','Tottenham','2016-01-13',91),
+('Joe','Hart','1987-04-19','Manchester City','2015-11-28',93),
+('Kevin','De Bruyne','1991-06-28','Manchester City','2015-11-28',77),
+('Sergio','Aguero','1988-06-02','Manchester City','2015-11-28',93),
+('Yaya','Toure','1983-05-13','Manchester City','2015-11-28',93),
+('Vincent','Kompany','1986-04-10','Manchester City','2015-11-28',93),
+('Peter','Cech','1982-05-20','Arsenal','2016-04-04',94),
+('Per','Mertesacker','1984-09-29','Arsenal','2016-04-04',94),
+('Mesut','Ozil','1988-10-15','Arsenal','2016-04-04',94),
+('Alexis','Sanchez','1988-12-19','Arsenal','2016-04-04',94),
+('Oliver','Giroud','1986-09-30','Arsenal','2016-04-04',62),
+('David','De Gea','1990-11-07','Manchester United','2016-02-04',92),
+('Juan','Mata','1988-04-28','Manchester United','2016-02-04',92),
+('Memphis','Depay','1994-02-13','Manchester United','2016-02-04',40),
+('Anthony','Martial','1995-12-05','Manchester United','2016-02-04',92),
+('Wayne','Rooney','1985-10-24','Manchester United','2016-02-04',75),
+('Winston','Reid','1988-07-03','West Ham United','2016-03-19',93),
+('Alexandre','Song','1987-09-09','West Ham United','2016-03-19',93),
+('Mark','Noble','1987-05-08','West Ham United','2016-03-19',93),
+('Enner','Valencia','1989-11-04','West Ham United','2016-03-19',93),
+('Andy','Carroll','1989-01-06','West Ham United','2016-03-19',93),
+('Fraser','Forster','1987-03-17','Manchester City','2015-11-28',93),
+('Virgil','van Dijk','1991-07-08','Manchester City','2015-11-28',80),
+('Steven','Davis','1985-01-01','Manchester City','2015-11-28',93),
+('Sadio','Mane','1992-04-10','Manchester City','2015-11-28',93),
+('Maya','Yoshida','1988-08-24','Manchester City','2015-11-28',84),
+('Kolo','Toure','1981-05-19','Arsenal','2016-04-04',94),
+('Philippe','Coutinho','1992-06-12','Arsenal','2016-04-04',94),
+('James','Milner','1986-01-04','Arsenal','2016-04-04',56),
+('Christian','Benteke','1990-12-03','Arsenal','2016-04-04',94),
+('Daniel','Sturridge','1989-09-01','Arsenal','2016-04-04',33),
+('Jack','Butland','1993-03-10','Manchester United','2016-02-04',92),
+('Xherdan','Shaqiri','1991-10-10','Manchester United','2016-02-04',92),
+('Bojan','Krkic','1990-08-28','Manchester United','2016-02-04',92),
+('Peter','Crouch','1981-01-30','Manchester United','2016-02-04',92),
+('Geoff','Cameron','1985-07-11','Manchester United','2016-02-04',92),
+('Cesc','Fabregas','1987-04-05','West Ham United','2016-03-19',93),
+('Oscar','dos Santos Emboaba','1991-09-09','West Ham United','2016-03-19',75),
+('Eden','Hazard','1991-01-07','West Ham United','2016-03-19',93),
+('Diego','Costa','1988-07-10','West Ham United','2016-03-19',79),
+('Thibaut','Courtois','1992-05-11','West Ham United','2016-03-19',93);
 
 
 --COACH RELATION--
 INSERT INTO coach
-VALUES ('Luis Enrique','Martínez García','1970-05-08','Spain','Barcelona','Barcelona',5)
+VALUES('Luis Enrique','Martínez García','1970-05-08','Spain','Barcelona','Barcelona',5)
 ,('Diego Pablo','Simeone','1970-04-28','Argentina','Atletico de Madrid','Madrid',7)
 ,('Zinedine','Zidane','1972-06-23','France','Real Madrid','Madrid',0)
 ,('Marcelino','García Toral','1965-08-14','Spain','Villarreal','Villarreal',0)
@@ -635,20 +685,82 @@ VALUES ('Luis Enrique','Martínez García','1970-05-08','Spain','Barcelona','Bar
 ,('Eusebio ','Di Francesco','1969-09-08','Italy','Sassuolo','Sassuolo',0)
 ,('Simone','Inzaghi','1976-04-05','Italy','Lazio','Rome',0)
 ,('Rolando','Maran','1963-07-14','Italy','Chievo','Chievo',0)
-,('Giampiero','Ventura','1948-01-14','Italy','Torino','Turin',0);
+,('Giampiero','Ventura','1948-01-14','Italy','Torino','Turin',0),
 
-/*
+--England--
+('Claudio','Ranieri','1951-10-20','Italy','Leicester City','Leicester',0),
+('Mauricio','Pochettino','1972-03-02','Argentina','Tottenham','London',0),
+('Manuel','Pellegrini','1953-09-16','Chile','Manchester City','Manchester',1),
+('Arsene','Wegner','1949-10-22','France','Arsenal','London',3),
+('Louis','van Gaal','1951-08-08','Netherlands','Manchester United','Manchester',0),
+('Slaven','Bilic','1968-09-11','Croatia','West Ham United','London',0),
+('Ronald','Koeman','1963-03-21','Netherlands','Southampton','Southampton',0),
+('Jurgen','Klopp','1967-06-16','Germany','Liverpool','Liverpool',0),
+('Mark','Hughes','1963-11-01','Wales','Stoke City','Stoke On Trent',2),
+('Guus','Hiddink','1946-11-08','Netherlands','Chelsea','London',0);
+
+
+-- SPONSOR RELATION --
 INSERT INTO sponsor
-VALUES
+VALUES('BBVA','Bank'),
+('FLP','League'),
+('Mazda','Cars'),
+('Nike','Sportswear'),
+('Adidas','Sportswear'),
+('Fly Emirates','Airline'),
+('Pamesa Ceramica','Decor'),
+('Kutxabank','Bank'),
+('New Balance','Sportswear'),
+('Citroen','Cars'),
+('Plus 500','Business'),
+('Puma','Sportswear'),
+('Drakkar Noir','Fragance'),
+('EA Sports','Video games'),
+('Giorgio Armani','Clothing'),
+('Goodyear','Tires'),
+('Huawei','Mobile company'),
+('Corvette','Cars'),
+('LG','Mobile company'),
+('Evonik','Chemicals'),
+('Postbank','Bank'),
+('T-Mobile','Mobile communications'),
+('Media Markt','Media'),
+('Gazprom','Energy'),
+('Volkswagen','Cars'),
+('REWE','Retail'),
+('Kommerling','Plastic Fabrication'),
+('King Power','Duty-free Shop'),
+('AIA','Insurance'),
+('Etihad Airways','Airline'),
+('Chevrolet','Cars'),
+('Betway','Gambling'),
+('Veho','Electronics'),
+('Standard Chartered','Bank'),
+('Bet365','Gambling'),
+('Yokohama','Tires'),
+('Barclays','Bank'),
+('Carlsberg','Brewing'),
+('Sky', 'TV station');
 
-INSERT INTO supports
-VALUES
-*/
+
+--SUPPORTS RELATION--
+INSERT INTO supports 
+VALUES('Drakkar Noir','Neymar','da Silva Santos','1992-02-05',2013),
+('EA Sports','Lionel Andrés','Messi','1987-06-24',2012),
+('Giorgio Armani','Cristiano Ronaldo','dos Santos Aveiro','1985-02-05',2011),
+--Germany--
+('Goodyear','Philipp','Lahm','1983-11-11',2015),
+('Huawei','Robert','Lewandowski','1988-08-21',2015),
+('Corvette','Javier','Hernandez','1998-06-01',2013),
+--England--
+('Nike','Eden','Hazard','1991-01-07',2012),
+('Adidas','Mesut','Ozil','1988-10-15',2013),
+('Puma','Sergio','Aguero','1988-06-02',2014);
 
 
 --REFEREE RELATION--
 INSERT INTO referee
-VALUES ('Jesus','Gil Manzano','Spain','Center','La Liga')
+VALUES('Jesus','Gil Manzano','Spain','Center','La Liga')
 ,('Jose Luis','González González','Spain','Center','La Liga')
 ,('Ignacio','Iglesias Villanueva','Spain','Center','La Liga')
 ,('Santiago','Jaime Latre','Spain','Center','La Liga')
@@ -657,26 +769,38 @@ VALUES ('Jesus','Gil Manzano','Spain','Center','La Liga')
 ,('Christian','Dingert','Germany','Center','Bundesliga')
 ,('Jochen','Drees','Germany','Center','Bundesliga')
 ,('Marco','Fritz','Germany','Center','Bundesliga')
-,('Manuel','Grafe','Germany','Center','Bundesliga');
+,('Manuel','Grafe','Germany','Center','Bundesliga'),
+--England
+('Lee','Mason','England','Center','Premier League'),
+('Roger','East','England','Center','Premier League'),
+('Anthony','Taylor','England','Center','Premier League'),
+('Bobby','Madley','England','Center','Premier League');
 
 
 --OFFICIATED_BY RELATION--
 INSERT INTO officiated_by
-VALUES ('Santiago','Jaime Latre','Barcelona','2015-08-29')
+VALUES('Santiago','Jaime Latre','Barcelona','2015-08-29')
 ,('Ignacio','Iglesias Villanueva','Atletico de Madrid','2016-01-24')
 ,('Jose Luis','González González','Real Madrid','2015-12-30')
 ,('Jose Luis','González González','Villarreal','2015-10-18')
 ,('Jesus','Gil Manzano','Athletic Bilbao','2016-01-24')
+--Germany--
 ,('Manuel','Grafe','1. FC Köln','2016-03-05')
 ,('Manuel','Grafe','VFL Wolfsburg','2016-02-27')
 ,('Christian','Dingert','1. FSV Mainz 05','2016-01-29')
 ,('Jochen','Drees','Hertha Berlin','2016-02-06')
-,('Bastian','Dankert','FC Ingolstadt 04','2015-12-19');
+,('Bastian','Dankert','FC Ingolstadt 04','2015-12-19'),
+--England--
+('Lee','Mason','Tottenham','2016-01-13'),
+('Roger','East','Manchester City','2015-11-28'),
+('Anthony','Taylor','Arsenal','2016-04-04'),
+('Roger','East','Manchester United','2016-02-04'),
+('Bobby','Madley','West Ham United','2016-03-19');
 
 
 --OWNER RELATION--
 INSERT INTO owner
-VALUES ('Josep Maria','Bartomeu Floreta','Business','Spain','1963-02-06')
+VALUES('Josep Maria','Bartomeu Floreta','Business','Spain','1963-02-06')
 ,('Enrique','Cerezo Torres','Producer','Spain','1948-02-27')
 ,('Florentino','Pérez Rodríguez','Business','Spain','1947-03-08')
 ,('Fernando','Roig Alfonso','Business','Spain','1947-06-25')
@@ -686,18 +810,30 @@ VALUES ('Josep Maria','Bartomeu Floreta','Business','Spain','1963-02-06')
 ,('Sheikh Abdullah','Al Thani','Entrepreneur','Catar','1969-09-29')
 ,('Alex','Aranzabal','Business','Spain','1974-05-24')
 ,('Jokin','Aperribay Bedialauneta','Business','Spain','1966-05-27')
+--Germany--
 ,('Reinhard','Rauball','Politician','Germany','1946-12-25')
 ,('Rolf','King','Business','Germany','1941-08-19')
 ,('Karl','Hopfner','NULL','NULL','1952-08-28')
 ,('Clemens','Tonnies','Entrepreneur','Germany','1956-05-27')
 ,('Werner','Gegenbauer','Entrepreneur','Germany','1950-05-28')
 ,('Werner','Spinner','NULL','Germany','1948-10-30')
-,('Harald','Strutz','NULL','Germany','1950-12-22');
+,('Harald','Strutz','NULL','Germany','1950-12-22'),
+--England--
+('Vichai','Srivaddhanaprabha','Business','Thailand','1957-04-03'),
+('Daniel','Levy','Business','England','1962-02-08'),
+('Khaldoon','Al Mubarak','Business','United Arab Emirates','1976-05-04'),
+('Chips','Keswick﻿','Banker','England','1940-02-02'),
+('Joel','Glazer','Business','USA','1959-05-05'),
+('David','Sullivan','Business','Wales','1949-02-05'),
+('Ralph','Krueger','Former Athlete','Canada','1959-08-31'),
+('Tom','Werner','TV Producer','USA','1950-04-12'),
+('Peter','Coates','Business','England','1938-01-13'),
+('Roman','Abramovich','Business','Russia','1966-10-24');
 
 
 --OWNS RELATION--
 INSERT INTO owns
-VALUES ('Josep Maria','Bartomeu Floreta','1963-02-06','Barcelona','Barcelona')
+VALUES('Josep Maria','Bartomeu Floreta','1963-02-06','Barcelona','Barcelona')
 ,('Enrique','Cerezo Torres','1948-02-27','Atletico de Madrid','Madrid')
 ,('Florentino','Pérez Rodríguez','1947-03-08','Real Madrid','Madrid')
 ,('Fernando','Roig Alfonso','1947-06-25','Villarreal','Villarreal')
@@ -707,10 +843,105 @@ VALUES ('Josep Maria','Bartomeu Floreta','1963-02-06','Barcelona','Barcelona')
 ,('Sheikh Abdullah','Al Thani','1969-09-29','Málaga','Málaga')
 ,('Alex','Aranzabal','1974-05-24','Eibar','Eibar')
 ,('Jokin','Aperribay Bedialauneta','1966-05-27','Real Sociedad','San Sebastián')
+--Germany--
 ,('Reinhard','Rauball','1946-12-25','Borussia Dortmund','Dortmund')
 ,('Rolf','King','1941-08-19','Borussia Mönchengladbach','Mönchengladbach')
 ,('Karl','Hopfner','1952-08-28','FC Bayern München','Munich')
 ,('Clemens','Tonnies','1956-05-27','FC Schalke 04','Gelsenkirchen')
 ,('Werner','Gegenbauer','1950-05-28','Hertha Berlin','Berlin')
 ,('Werner','Spinner','1948-10-30','1. FC Köln','Köln')
-,('Harald','Strutz','1950-12-22','1. FSV Mainz 05','Mainz');
+,('Harald','Strutz','1950-12-22','1. FSV Mainz 05','Mainz'),
+
+--England--
+('Vichai','Srivaddhanaprabha','1957-04-03','Leicester City','Leicester'),
+('Daniel','Levy','1962-02-08','Tottenham','London'),
+('Khaldoon','Al Mubarak','1976-05-04','Manchester City','Manchester'),
+('Chips','Keswick﻿','1940-02-02','Arsenal','London'),
+('Joel','Glazer','1959-05-05','Manchester United','Manchester'),
+('David','Sullivan','1949-02-05','West Ham United','London'),
+('Ralph','Krueger','1959-08-31','Southampton','Southampton'),
+('Tom','Werner','1950-04-12','Liverpool','Liverpool'),
+('Peter','Coates','1938-01-13','Stoke City','Stoke On Trent'),
+('Roman','Abramovich','1966-10-24','Chelsea','London');
+
+
+--ENDORSES--
+INSERT INTO endorses 
+VALUES('Nike','Barcelona','Barcelona',1998),
+('Plus 500','Atletico de Madrid','Madrid',2013),
+('Fly Emirates','Real Madrid','Madrid',2014),
+('Pamesa Ceramica','Villarreal','Villarreal',2014),
+('Kutxabank','Athletic Bilbao','Bilbao',2015),
+('Citroen','Celta Vigo','Vigo',2010),
+('New Balance','Sevilla','Sevilla',2015),
+('Nike','Málaga','Málaga',2008),
+('Puma','Eibar','Eibar',2013),
+('Adidas','Real Sociedad','San Sebastián',2009),
+('LG','Bayer 04 Leverkusen','Leverkusen',2015),
+('Evonik','Borussia Dortmund','Dortmund',2014),
+('Postbank','Borussia Mönchengladbach','Mönchengladbach',2013),
+('T-Mobile','FC Bayern München','Munich',2010),
+('Media Markt','FC Ingolstadt 04','Ingolstadt',2011),
+('Gazprom','FC Schalke 04','Gelsenkirchen',2012),
+('Nike','Hertha Berlin','Berlin',2013),
+('Volkswagen','VFL Wolfsburg','Wolfsburg',2000),
+('REWE','1. FC Köln','Köln',2010),
+('Kommerling','1. FSV Mainz 05','Mainz',2013),
+('King Power','Leicester City','Leicester',2015),
+('AIA','Tottenham','London',2013),
+('Etihad Airways','Manchester City','Manchester',2009),
+('Fly Emirates','Arsenal','London',2007),
+('Chevrolet','Manchester United','Manchester',2014),
+('Betway','West Ham United','London',2015),
+('Veho','Southampton','Southampton',2015),
+('Standard Chartered','Liverpool','Liverpool',2010),
+('Bet365','Stoke City','Stoke On Trent',2014),
+('Yokohama','Chelsea','London',2015);
+
+
+--ADVERTISES RELATION--
+INSERT INTO advertises 
+VALUES('Nike','Home','Barcelona','Barcelona'),
+('Plus 500','Home','Atletico de Madrid','Madrid'),
+('Fly Emirates','Home','Real Madrid','Madrid'),
+('Pamesa Ceramica','Home','Villarreal','Villarreal'),
+('Kutxabank','Home','Athletic Bilbao','Bilbao'),
+('Citroen','Home','Celta Vigo','Vigo'),
+('New Balance','Home','Sevilla','Sevilla'),
+('Nike','Home','Málaga','Málaga'),
+('Puma','Home','Eibar','Eibar'),
+('Adidas','Home','Real Sociedad','San Sebastián'),
+('LG','Home','Bayer 04 Leverkusen','Leverkusen'),
+('Evonik','Home','Borussia Dortmund','Dortmund'),
+('Postbank','Home','Borussia Mönchengladbach','Mönchengladbach'),
+('T-Mobile','Home','FC Bayern München','Munich'),
+('Media Markt','Home','FC Ingolstadt 04','Ingolstadt'),
+('Gazprom','Home','FC Schalke 04','Gelsenkirchen'),
+('Nike','Home','Hertha Berlin','Berlin'),
+('Volkswagen','Home','VFL Wolfsburg','Wolfsburg'),
+('REWE','Home','1. FC Köln','Köln'),
+('Kommerling','Home','1. FSV Mainz 05','Mainz'),
+('King Power','Home','Leicester City','Leicester'),
+('AIA','Home','Tottenham','London'),
+('Etihad Airways','Home','Manchester City','Manchester'),
+('Fly Emirates','Home','Arsenal','London'),
+('Chevrolet','Home','Manchester United','Manchester'),
+('Betway','Home','West Ham United','London'),
+('Veho','Home','Southampton','Southampton'),
+('Standard Chartered','Home','Liverpool','Liverpool'),
+('Bet365','Home','Stoke City','Stoke On Trent'),
+('Yokohama','Home','Chelsea','London');
+
+
+--SPONSORS RELATION--
+INSERT INTO sponsors VALUES 
+('BBVA','La Liga',2007),
+('FLP','La Liga',2009),
+('Mazda','La Liga',2010),
+('Adidas','Bundesliga',2006),
+('Sky','Bundesliga',2007),
+('EA Sports','Bundesliga',2008),
+('Barclays','Premier League',2004),
+('EA Sports','Premier League',2006),
+('Nike','Premier League',2008),
+('Carlsberg','Premier League',2003);
