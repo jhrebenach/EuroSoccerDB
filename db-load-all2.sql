@@ -174,3 +174,38 @@ INSERT INTO endorses VALUES
 ('Standard Chartered','Liverpool','Liverpool',2010),
 ('Bet365','Stoke City','Stoke On Trent',2014),
 ('Yokohama','Chelsea','London',2015);
+
+
+--advertises Relation--
+INSERT INTO advertises VALUES 
+('Nike','Home','Barcelona','Barcelona'),
+('Plus 500','Home','Atletico de Madrid','Madrid'),
+('Fly Emirates','Home','Real Madrid','Madrid'),
+('Pamesa Ceramica','Home','Villarreal','Villarreal'),
+('Kutxabank','Home','Athletic Bilbao','Bilbao'),
+('Citroen','Home','Celta Vigo','Vigo'),
+('New Balance','Home','Sevilla','Sevilla'),
+('Nike','Home','Málaga','Málaga'),
+('Puma','Home','Eibar','Eibar'),
+('Adidas','Home','Real Sociedad','San Sebastian'),
+('LG','Home','Bayer 04 Leverkusen','Leverkusen'),
+('Evonik','Home','Borussia Dortmund','Dortmund'),
+('Postbank','Home','Borussia Mönchengladbach','Mönchengladbach'),
+('T-Mobile','Home','FC Bayern München','Munich'),
+('Media Markt','Home','FC Ingolstadt 04','Ingolstadt'),
+('Gazprom','Home','FC Schalke 04 ','Gelsenkirchen'),
+('Nike','Home','Hertha Berlin','Berlin'),
+('Volkswagen','Home','VFL Wolfsburg','Wolfsburg'),
+('REWE','Home','1. FC Köln','Cologne'),
+('Kommerling','Home','1. FSV Mainz 05','Mainz'),
+('King Power','Home','Leicester City','Leicester'),
+('AIA','Home','Tottenham','London'),
+('Etihad Airways','Home','Manchester City','Manchester'),
+('Fly Emirates','Home','Arsenal','London'),
+('Chevrolet','Home','Manchester United','Manchester'),
+('Betway','Home','West Ham United','London'),
+('Veho','Home','Southampton','Southampton'),
+('Standard Chartered','Home','Liverpool','Liverpool'),
+('Bet365','Home','Stoke City','Stoke On Trent'),
+('Yokohama','Home','Chelsea','London');
+
