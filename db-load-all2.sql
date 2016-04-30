@@ -129,3 +129,15 @@ INSERT INTO supports VALUES
 ('Tom','Werner','TV Producer','USA','1950-04-12'),
 ('Peter Coates','Coates','Business','England','1938-01-13'),
 ('Roman','Abramovich','Business','Russia','1966-10-24');
+
+--England-- OWNS
+('Vichai','Srivaddhanaprabha','1957-04-03','Leicester City','Leicester'),
+('Daniel','Levy','1962-02-08','Tottenham','London'),
+('Khaldoon','Al Mubarak','1976-05-04','Manchester City','Manchester'),
+('Chips','Keswick﻿','1940-02-02','Arsenal','London'),
+('Joel','Glazer','1959-05-05','Manchester United','Manchester'),
+('David','Sullivan','1949-02-05','West Ham United','London'),
+('Ralph','Krueger','1959-08-31','Southampton','Southampton'),
+('Tom','Werner','1950-04-12','Liverpool','Liverpool'),
+('Peter','Coates','1938-01-13','Stoke City','Stoke On Trent'),
+('Roman','Abramovich','1966-10-24','Chelsea','London');
