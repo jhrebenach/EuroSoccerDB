@@ -14,7 +14,7 @@ CREATE TABLE referee (
 	,rlast_name			VARCHAR(30) NOT NULL
 	,country			VARCHAR(25)
 	,position			VARCHAR(30)
-	,league_name		VARCHAR(30)
+	,league_name			VARCHAR(30)
 	,PRIMARY KEY (rfirst_name, rlast_name)
 	,FOREIGN KEY (league_name)
 		REFERENCES league(name)
@@ -25,7 +25,7 @@ CREATE TABLE owner (
 	,olast_name			VARCHAR(30) NOT NULL
 	,occupation			VARCHAR(30)
 	,country			VARCHAR(25)
-	,date_of_birth		DATE
+	,date_of_birth			SMALLINT
 	,PRIMARY KEY (ofirst_name, olast_name)
 );
 
@@ -44,7 +44,7 @@ CREATE TABLE advertises (
 CREATE TABLE sponsors (
 	sponsors_name		VARCHAR(30) NOT NULL
 	,league_name		VARCHAR(30) NOT NULL
-	,date_signed		DATE
+	,date_signed		SMALLINT
 	,PRIMARY KEY (sponsors_name, league_name)
 	,FOREIGN KEY (sponsors_name)
 		REFERENCES sponsor(name)
@@ -56,7 +56,7 @@ CREATE TABLE officiated_by (
 	rfirst_name			VARCHAR(30) NOT NULL
 	,rlast_name			VARCHAR(30) NOT NULL
 	,home_team			VARCHAR(30) NOT NULL
-	,match_date			DATE 		NOT NULL
+	,match_date			DATE NOT NULL
 	,PRIMARY KEY (rfirst_name, rlast_name, home_team, match_date)
 	,FOREIGN KEY (rfirst_name, rlast_name)
 		REFERENCES referee(rfirst_name, rlast_name)
