@@ -104,3 +104,9 @@ INSERT INTO supports VALUES
 ('Nike','Eden','Hazard','1991-01-07','2012'),
 ('Adidas','Mesut','Ozil','1988-10-15','2013'),
 ('Puma','Sergio','Aguero','1988-06-02','2014');
+
+--England--
+('Lee','Mason','England','Center','Premier League'),
+('Roger','East','England','Center','Premier League'),
+('Anthony','Taylor','England','Center','Premier League'),
+('Bobby','Madley','England','Center','Premier League');
