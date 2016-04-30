@@ -116,7 +116,7 @@ CREATE TABLE supports (
 	playerfirst_name VARCHAR(30),
 	playerlast_name VARCHAR(30),
 	playerdate_of_birth DATE,
-	date_signed DATE,
+	date_signed SMALLINT,
 	PRIMARY KEY (sponsor_name, playerfirst_name, playerlast_name, playerdate_of_birth),
 	FOREIGN KEY (playerfirst_name, playerlast_name, playerdate_of_birth) REFERENCES player(pfirst_name, plast_name, date_of_birth),
 	FOREIGN KEY (sponsor_name) REFERENCES sponsor(name)
@@ -165,7 +165,7 @@ CREATE TABLE endorses(
 	sponsors_name VARCHAR(30),
 	team_name VARCHAR(30),
 	team_city VARCHAR(30),
-	date_signed DATE,
+	date_signed SMALLINT,
 	PRIMARY KEY (sponsors_name, team_name, team_city),
 	FOREIGN KEY (sponsors_name) REFERENCES sponsor(name),
 	FOREIGN KEY (team_name, team_city) REFERENCES team(name, city)
@@ -185,7 +185,7 @@ CREATE TABLE advertises (
 CREATE TABLE sponsors (
 	sponsors_name VARCHAR(30) NOT NULL,
 	league_name VARCHAR(30) NOT NULL,
-	date_signed DATE,
+	date_signed SMALLINT,
 	PRIMARY KEY (sponsors_name, league_name),
 	FOREIGN KEY (sponsors_name) REFERENCES sponsor(name),
 	FOREIGN KEY (league_name) REFERENCES league(name)
