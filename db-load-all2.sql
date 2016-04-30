@@ -105,8 +105,15 @@ INSERT INTO supports VALUES
 ('Adidas','Mesut','Ozil','1988-10-15','2013'),
 ('Puma','Sergio','Aguero','1988-06-02','2014');
 
---England--
+--England-- REFEREE
 ('Lee','Mason','England','Center','Premier League'),
 ('Roger','East','England','Center','Premier League'),
 ('Anthony','Taylor','England','Center','Premier League'),
 ('Bobby','Madley','England','Center','Premier League');
+
+--England-- OFFICIATED_BY
+('Lee','Mason','Tottenham','2016-01-13'),
+('Roger','East','Manchester City','2015-11-28'),
+('Anthony','Taylor','Arsenal','2016-04-04'),
+('Roger','East','Manchester United','2016-02-04'),
+('Bobby','Madley','West Ham United','2016-03-19');
