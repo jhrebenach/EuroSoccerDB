@@ -209,3 +209,16 @@ INSERT INTO advertises VALUES
 ('Bet365','Home','Stoke City','Stoke On Trent'),
 ('Yokohama','Home','Chelsea','London');
 
+--sponsors Relation--
+INSERT INTO sponsors VALUES 
+('BBVA','La Liga',2007),
+('FLP','La Liga',2009),
+('Mazda','La Liga',2010),
+('Adidas','Bundesliga',2006),
+('Sky','Bundesliga',2007),
+('EA Sports','Bundesliga',2008),
+('Barclays','Premier League',2004),
+('EA Sports','Premier League',2006),
+('Nike','Premier League',2008),
+('Carlsberg','Premier League',2003);
+
