@@ -117,3 +117,15 @@ INSERT INTO supports VALUES
 ('Anthony','Taylor','Arsenal','2016-04-04'),
 ('Roger','East','Manchester United','2016-02-04'),
 ('Bobby','Madley','West Ham United','2016-03-19');
+
+--England-- OWNER
+('Vichai','Srivaddhanaprabha','Business','Thailand','1957-04-03'),
+('Daniel','Levy','Business','England','1962-02-08'),
+('Khaldoon','Al Mubarak','Business','United Arab Emirates','1976-05-04'),
+('Chips','Keswick﻿','Banker','England','1940-02-02'),
+('Joel','Glazer','Business','USA','1959-05-05'),
+('David','Sullivan','Business','Wales','1949-02-05'),
+('Ralph','Krueger','Former Athlete','Canada','1959-08-31'),
+('Tom','Werner','TV Producer','USA','1950-04-12'),
+('Peter Coates','Coates','Business','England','1938-01-13'),
+('Roman','Abramovich','Business','Russia','1966-10-24');
