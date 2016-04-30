@@ -94,3 +94,13 @@ INSERT INTO sponsor VALUES ('BBVA','Bank'),
 ('EA Sports','Videogames'),
 ('Carlsberg','Brewing');
 
+INSERT INTO supports VALUES 
+('Drakkar Noir','Neymar ','da Silva Santos','1992-02-05','2013'),
+('EA Sports','Lionel Ándres','Messi ','1987-06-24','2012'),
+('Armani','Cristiano Ronaldo','dos Santos Aveiro','1985-02-05','2011'),
+('Goodyear','Philipp','Lahm','1983-11-11','2015'),
+('Huawei','Robert','Lewandowski','1988-08-21','2015'),
+('Corvette','Javier','Hernandez','1998-06-01','2013'),
+('Nike','Eden','Hazard','1991-01-07','2012'),
+('Adidas','Mesut','Ozil','1988-10-15','2013'),
+('Puma','Sergio','Aguero','1988-06-02','2014');
